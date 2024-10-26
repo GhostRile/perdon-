@@ -1,0 +1,65 @@
+/* General reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Extra styling */
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #eee;
+    font-family: sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 0 8px 8px #ccc;
+    padding: 10px;
+  }
+  
+  .slide {
+    width: 90%;
+    max-width: 600px;
+    font-size: 1.2rem;
+    text-align: center;
+    white-space: normal; /* Permitir que el texto se ajuste a la pantalla */
+  }
+  
+  .slide .item {
+    position: relative;
+    display: none;
+    overflow: hidden;
+    white-space: normal; /* Ajuste para dispositivos móviles */
+    vertical-align: bottom;
+  }
+  
+  .slide .item.active {
+    display: inline-block;
+    animation: slideInOut 3s ease-in-out 0s 2 alternate both running;
+  }
+  
+  .slide b {
+    border-left: 5px solid #000;
+    vertical-align: top;
+  }
+  
+  /* Keyframes para animación */
+  @keyframes slideInOut {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .slide {
+      font-size: 1rem; /* Reducir tamaño en móviles */
+      text-align: left; /* Ajustar alineación en pantallas pequeñas */
+    }
+  }
+  
